@@ -2,6 +2,22 @@
     font-family: 'Lato', sans-serif;
 }
 
+.canvas-check {
+    z-index: 1000;
+    height: 0;
+    visibility: hidden;
+    opacity: 0%;
+    transition: all 0.3s cubic-bezier(0.215, 0.610, 0.355, 1.000);
+}
+
+@media only screen and (max-width: 450px) {
+    .canvas-check {
+        height: 10%;
+        visibility: visible;
+        opacity: 100%;
+    }
+}
+
 .App {
     display: flex;
     flex-direction: column;
@@ -21,20 +37,4 @@
     justify-content: center;
     align-content: center;
     align-items: center;
-}
-
-.canvas-check {
-    z-index: 1000;
-    height: 0;
-    visibility: hidden;
-    opacity: 0%;
-    transition: all 0.3s cubic-bezier(0.215, 0.610, 0.355, 1.000);
-}
-
-@media screen and (max-width: 450px) {
-    .canvas-check {
-        height: 10%;
-        visibility: visible;
-        opacity: 100%;
-    }
 }
