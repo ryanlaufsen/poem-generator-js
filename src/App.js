@@ -1,23 +1,42 @@
-import logo from './logo.svg';
 import './App.css';
+import NumberInput from './components/NumberInput';
+import SubmitCard from './components/SubmitCard';
+import { useState } from 'react';
+import GeneratePoems from './GeneratePoems';
 
 function App() {
+
+  const [fileQuantity, setFileQuantity] = useState(0);
+  const [lineQuantity, setLineQuantity] = useState(0);
+
+  const handleFileQuantityChange = (e) => {
+    setFileQuantity(e.target.value);
+  };
+
+  const handleLineQuantityChange = (e) => {
+    setLineQuantity(e.target.value);
+  };
+
+  const handleSubmit = (e) =>{
+    e.preventDefault();
+    GeneratePoems(fileQuantity, lineQuantity);
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <form onSubmit={handleSubmit} className="row-container">
+          <NumberInput
+            id="file-quantity"
+            label="How many poems?"
+            value={fileQuantity}
+            onChange={handleFileQuantityChange} />
+          <NumberInput
+            id="line-quantity"
+            label="How many lines in each?"
+            value={lineQuantity}
+            onChange={handleLineQuantityChange} />
+          <SubmitCard label="Generate"/>
+        </form>
     </div>
   );
 }

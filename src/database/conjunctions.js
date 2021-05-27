@@ -1,0 +1,1 @@
+export const conjunctions = ["after", "although", "while", "whenever", "unless", "since", "because", "and", "before", "whilst", "for", "yet", "so", "but"];
