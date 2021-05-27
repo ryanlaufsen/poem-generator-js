@@ -24,7 +24,7 @@
 }
 
 .canvas-check {
-    color: black;
+    z-index: 1000;
     height: 0;
     visibility: hidden;
     opacity: 0%;
