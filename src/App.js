@@ -24,19 +24,22 @@ function App() {
 
   return (
     <div className="App">
-        <form onSubmit={handleSubmit} className="row-container">
-          <NumberInput
-            id="file-quantity"
-            label="How many poems?"
-            value={fileQuantity}
-            onChange={handleFileQuantityChange} />
-          <NumberInput
-            id="line-quantity"
-            label="How many lines in each?"
-            value={lineQuantity}
-            onChange={handleLineQuantityChange} />
-          <SubmitCard label="Generate"/>
-        </form>
+      <div className="canvas-check">
+        <p>Please rotate your screen or use a wider device.</p>
+      </div>
+      <form onSubmit={handleSubmit} className="row-container">
+        <NumberInput
+          id="file-quantity"
+          label="How many poems?"
+          value={fileQuantity}
+          onChange={handleFileQuantityChange} />
+        <NumberInput
+          id="line-quantity"
+          label="How many lines in each?"
+          value={lineQuantity}
+          onChange={handleLineQuantityChange} />
+        <SubmitCard label="Generate"/>
+      </form>
     </div>
   );
 }

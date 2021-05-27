@@ -22,3 +22,18 @@
     align-content: center;
     align-items: center;
 }
+
+.canvas-check {
+    height: 0;
+    visibility: hidden;
+    opacity: 0%;
+    transition: all 0.3s cubic-bezier(0.215, 0.610, 0.355, 1.000);
+}
+
+@media screen and (max-width: 450px) {
+    .canvas-check {
+        height: 10%;
+        visibility: visible;
+        opacity: 100%;
+    }
+}
