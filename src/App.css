@@ -3,7 +3,7 @@
 }
 
 .canvas-check {
-    z-index: 1000;
+    z-index: -10;
     height: 0;
     visibility: hidden;
     opacity: 0;
